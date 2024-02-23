@@ -1,0 +1,22 @@
+{
+    "name": "zuramai/pusar",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Zuramai\\Pusar\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "zuramai",
+            "email": "saugi.dev@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "require": {
+        "textalk/websocket": "^1.6"
+    }
+}
