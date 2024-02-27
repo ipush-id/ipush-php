@@ -2,7 +2,7 @@
 
 namespace Zuramai\Pusar;
 
-use ErrorException;
+use Exception;
 
 class Pusar {
     private $wsUrl;
@@ -31,9 +31,10 @@ class Pusar {
     private function connect() {
         $url = $this->build_url();
         $client = new \WebSocket\Client($url);
-
+        $client->receive();
         $this->ws = $client;
         return $client;
+
     }
 
     public function trigger($channel, $event, $data) {
