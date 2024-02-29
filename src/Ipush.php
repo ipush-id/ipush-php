@@ -1,10 +1,10 @@
 <?php 
 
-namespace Zuramai\Pusar;
+namespace Zuramai\Ipush;
 
 use Exception;
 
-class Pusar {
+class Ipush {
     private $wsUrl;
     private $appId;
     private $apiKey;
@@ -34,7 +34,6 @@ class Pusar {
         $client->receive();
         $this->ws = $client;
         return $client;
-
     }
 
     public function trigger($channel, $event, $data) {

@@ -1,10 +1,10 @@
 {
-    "name": "zuramai/pusar",
+    "name": "zuramai/ipush",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Zuramai\\Pusar\\": "src/"
+            "Zuramai\\Ipush\\": "src/"
         }
     },
     "authors": [
