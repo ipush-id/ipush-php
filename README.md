@@ -4,13 +4,13 @@
 
 1. Install package
 ```
-composer require zuramai/ipush-php
+composer require ipush/ipush
 ```
 
 2. Menggunakan library Ipush
 ```php
 require_once __DIR__ . '/../vendor/autoload.php';
-use Ipush\\Ipush\\ Ipush;
+use Ipush\\Ipush;
 
 try {
     $ipush = new Ipush(

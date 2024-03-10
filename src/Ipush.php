@@ -1,8 +1,6 @@
 <?php 
 
-namespace Zuramai\Ipush;
-
-use Exception;
+namespace Ipush;
 
 class Ipush {
     private $wsUrl;
