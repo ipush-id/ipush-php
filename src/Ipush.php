@@ -28,7 +28,13 @@ class Ipush {
 
     private function connect() {
         $url = $this->build_url();
-        $client = new \WebSocket\Client($url);
+        $client = new \WebSocket\Client($url, [
+            'headers' => [
+                'cache-control' => 'no-cache',
+                'pragma' => 'no-cache',
+            ]
+        ]);
+        
         $client->receive();
         $this->ws = $client;
         return $client;
