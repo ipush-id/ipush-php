@@ -1,27 +1,26 @@
-# Pusar PHP Client
-
+# Ipush PHP Client
 
 ### PHP
 
 1. Install package
 ```
-composer require zuramai/pusar-php
+composer require zuramai/ipush-php
 ```
 
-2. Menggunakan library Pusar
+2. Menggunakan library Ipush
 ```php
 require_once __DIR__ . '/../vendor/autoload.php';
-use Zuramai\\Pusar\\ Pusar;
+use Ipush\\Ipush\\ Ipush;
 
 try {
-    $pusar = new Pusar(
+    $ipush = new Ipush(
         WEBSOCKET_URL
         APP_ID,
         API_KEY,
         API_SECRET
     );
 }catch(Exception $e) {
-    // Pesan jika gagal koneksi ke socket server Pusar 
+    // Pesan jika gagal koneksi ke socket server Ipush 
     echo $e->getMessage();
 }
 ```
@@ -30,10 +29,10 @@ try {
 
 ```
 // Format:
-// $pusar->trigger(CHANNEL, EVENT, DATA);
+// $ipush->trigger(CHANNEL, EVENT, DATA);
 
 // Contoh:
-$pusar->trigger("transaction", "buy-voucher-success", [
+$ipush->trigger("transaction", "buy-voucher-success", [
     'current_balance' => 10000, 
     'product' => 'Pulsa Telkomsel 10000'
 ]);
